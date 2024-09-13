@@ -15,11 +15,11 @@ object Camera {
     private var lastMousePosition = Mouse.position
     private val sensitivity = 0.2f
 
-    var position = Vector3f(0f, 0f, 5f)
+    var position = Vector3f(0f, 0f, 10f)
 
     var positionOffset = Vector3f(0f, 0f, 0f)
 
-    var rotation = Vector2f(40f, 30f)
+    var rotation = Vector2f(0f, 60f)
 
     var view = Matrix().translate(position)
     var projection = Matrix().projectionMatrix(90f, 1000f, 0.1f)
@@ -50,9 +50,9 @@ object Camera {
 
     fun update() {
         if (Keyboard.isKeyPressed(GLFW.GLFW_KEY_R)) {
-            position.set(0f, 0f, 5f)
+            position.set(0f, 0f, 10f)
             positionOffset.set(0f, 0f, 0f)
-            rotation.set(40f, 30f)
+            rotation.set(0f, 60f)
         }
 
         val mousePosition = Mouse.position
@@ -94,7 +94,7 @@ object Camera {
         positionOffset.x += cos(-rotation.x * Math.PI / 180).toFloat() * xOffset / 20f
         positionOffset.z -= sin(-rotation.x * Math.PI / 180).toFloat() * xOffset / 20f
 
-        positionOffset.y -= yOffset / 20f
-
+        positionOffset.x += sin(-rotation.x * Math.PI / 180).toFloat() * yOffset / 20f
+        positionOffset.z += cos(-rotation.x * Math.PI / 180).toFloat() * yOffset / 20f
     }
 }

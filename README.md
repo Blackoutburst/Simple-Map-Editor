@@ -11,9 +11,9 @@
 - Save File: **S**
 
 ## File Format
-SME files use the simplest format possible\
+SME files use the simplest format possible
 ```SME
-...
+
 ```
 
 ## Building

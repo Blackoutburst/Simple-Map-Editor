@@ -6,6 +6,8 @@
 ## Controls
 - Rotate Camera: **Left Shift** + **Left Mouse**
 - Move Camera: **Left Shift** + **Right Mouse**
+- Toggle Grid: **G**
+- Toggle Axys: **Q**
 - Reset Camera: **R**
 - Open File: **O**
 - Save File: **S**

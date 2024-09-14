@@ -44,5 +44,5 @@ bin/
 ### JVM ###
 hs_err_pid*
 
-### Export ###
-sme export
+### Generated ###
+sme-assets

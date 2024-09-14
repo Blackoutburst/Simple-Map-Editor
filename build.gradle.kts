@@ -9,7 +9,7 @@ plugins {
 }
 
 application {
-    mainClass.set("dev.blackoutburst.mapeditor.MainKt")
+    mainClass.set("dev.blackoutburst.sme.MainKt")
 }
 
 javafx {
